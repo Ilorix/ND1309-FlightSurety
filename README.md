@@ -10,7 +10,7 @@ To install, download or clone this repo, then run:
 `npm install`
 
 
-## DApp Building
+## DApp Build and Deployment
 
 Compile contracts (FlightSuretyApp and FlightSuretyData contracts):
 ```
@@ -42,26 +42,25 @@ Then, run these two truffle tests separately:
 
 `truffle test ./test/oracles.js`
 ```
-To use the dapp:
 
-`truffle migrate`
-`npm run dapp`
+## Launching FlightSurety DApp
 
-To view dapp:
+1. Run Ganache CLI:
+```
+ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit 500000000 --gasPrice 30000000000
+```
+2. Start the server:
+```
+npm run server
+```
+Wait until oracles have been registered before starting the DApp.
 
-`http://localhost:8000`
+3. Start the DApp:
+```
+npm run dapp
+```
+Go to http://localhost:8000
 
-## Develop Server
-
-`npm run server`
-`truffle test ./test/oracles.js`
-
-## Deploy
-
-To build dapp for prod:
-`npm run dapp:prod`
-
-Deploy the contents of the ./dapp folder
 
 
 ## Resources
