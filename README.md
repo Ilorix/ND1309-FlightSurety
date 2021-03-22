@@ -46,19 +46,19 @@ truffle test ./test/oracles.js
 ## Launching FlightSurety DApp
 
 1. Import contract owner, airline and passengers accounts from Ganache to Metamask using private keys.
-
 Here is How Imported Accounts are used in DApp and Metamask:
-|# | Account  | Defaults| 
-|-- | ---- | --------- |
-|1  |owner | |   
-|2  |airline | 5 airline accounts  |
-|3  |airline | |
-|4  |airline |  |
-|5  |airline |   |
-|6  |airline ||
-|7  |passenger | 3 passenger accounts|
-|8  |passenger | |
-|9  |passenger | |
+
+    |# | Account  | Default| 
+    |-- | ---- | --------- |
+    |1  |owner | |   
+    |2  |airline | 5 airline accounts  |
+    |3  |airline | |
+    |4  |airline |  |
+    |5  |airline |   |
+    |6  |airline ||
+    |7  |passenger | 3 passenger accounts|
+    |8  |passenger | |
+    |9  |passenger | |
 
 <br>
 
