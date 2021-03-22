@@ -47,7 +47,7 @@ truffle test ./test/oracles.js
 
 1. Import contract owner, airline and passengers accounts from Ganache to Metamask using private keys.
 
-### How Imported Accounts are used in DApp and Metamask
+Here is How Imported Accounts are used in DApp and Metamask:
 |# | Account  | Defaults| 
 |-- | ---- | --------- |
 |1  |owner | |   
@@ -63,16 +63,16 @@ truffle test ./test/oracles.js
 <br>
 
 
-1. Run Ganache CLI:
+2. Run Ganache CLI:
 ```
 ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit 500000000 --gasPrice 30000000000
 ```
-2. Start the server and wait until oracles have been registered before starting the DApp:
+3. Start the server and wait until oracles have been registered before starting the DApp:
 ```
 npm run server
 ```
 
-3. Start the DApp:
+4. Start the DApp:
 ```
 npm run dapp
 ```
