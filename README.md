@@ -38,9 +38,9 @@ ganache-cli --accounts=50 --gasLimit 500000000 --gasPrice 30000000000
 
 Then, run these two truffle tests separately:
 ```
-`truffle test ./test/flightSurety.js`
+truffle test ./test/flightSurety.js
 
-`truffle test ./test/oracles.js`
+truffle test ./test/oracles.js
 ```
 
 ## Launching FlightSurety DApp
