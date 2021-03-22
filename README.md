@@ -49,11 +49,10 @@ Then, run these two truffle tests separately:
 ```
 ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit 500000000 --gasPrice 30000000000
 ```
-2. Start the server:
+2. Start the server and wait until oracles have been registered before starting the DApp:
 ```
 npm run server
 ```
-Wait until oracles have been registered before starting the DApp.
 
 3. Start the DApp:
 ```
