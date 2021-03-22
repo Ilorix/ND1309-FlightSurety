@@ -31,12 +31,12 @@ truffle migrate --reset --network development
 
 ## DApp Testing
 
-First, run Ganache CLI:
+1. Run Ganache CLI:
 ```
 ganache-cli --accounts=50 --gasLimit 500000000 --gasPrice 30000000000
 ```
 
-Then, run these two truffle tests separately:
+2. Run flightSurety and oracles truffle tests (separately):
 ```
 truffle test ./test/flightSurety.js
 
@@ -44,6 +44,24 @@ truffle test ./test/oracles.js
 ```
 
 ## Launching FlightSurety DApp
+
+1. Import contract owner, airline and passengers accounts from Ganache to Metamask using private keys.
+
+### How Imported Accounts are used in DApp and Metamask
+# | Account  | Defaults 
+-- | ---- | --------- 
+1  |owner |   
+2  |airline | 5 airline accounts  
+3  |airline | 
+4  |airline |  
+5  |airline |   
+6  |airline |
+7  |passenger | 3 passenger accounts
+8  |passenger | 
+9  |passenger | 
+
+<br>
+
 
 1. Run Ganache CLI:
 ```
