@@ -5,7 +5,7 @@ Udacity Blockchain Developer Nanodegree project Flight Surety.
 
 ## Installation
 
-To install, download or clone the repo, then run:
+To install, download or clone this repo, then run:
 
 `npm install`
 
