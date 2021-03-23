@@ -48,24 +48,25 @@ truffle test ./test/oracles.js
 1. Import contract owner, airline and passengers accounts from Ganache to Metamask using private keys.
 Here is how imported accounts are used in DApp and Metamask:
 
-    |# | Account  | Default| 
-    |-- | ---- | --------- |
-    |1  |owner | |   
-    |2  |airline | 5 airline accounts  |
-    |3  |airline | |
-    |4  |airline |  |
-    |5  |airline |   |
-    |6  |airline ||
-    |7  |passenger | 3 passenger accounts|
-    |8  |passenger | |
-    |9  |passenger | |
-    |10 |oracle | 40 oracles |
-    |.. |.. |  |
-    |50 |oracle |  |
-
-
-Airline and passenger default numbers of accounts are defined and can be changed in master_data.js: **NUMBER_OF_AIRLINES** and **NUMBER_OF_PASSENGERS** constants).
-Default number of oracle accounts is defined and can be changed in server.js: **NUMBER_OF_ORACLES**.
+    |# | Account  | Default| Metamask|
+    |-- | ---- | --------- | --------|
+    |1  |owner | |   |
+    |2  |airline | 5 airline accounts| import|
+    |3  |airline | ||
+    |4  |airline |  ||
+    |5  |airline |   ||
+    |6  |airline |||
+    |7  |passenger | 3 passenger accounts|import|
+    |8  |passenger | ||
+    |9  |passenger | ||
+    |10 |oracle | 40 oracles | don't import|
+    |.. |.. | .. |..|
+    |50 |oracle |  ||
+    
+    
+    Airline and passenger default numbers of accounts are defined and can be changed in master_data.js: **NUMBER_OF_AIRLINES** and **NUMBER_OF_PASSENGERS** constants).
+    
+    Oracle accounts will not be imported to Metamask. The number of oracle accounts is defined and can be changed in server.js: **NUMBER_OF_ORACLES**.
 <br>
 
 
