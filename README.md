@@ -31,21 +31,23 @@ truffle migrate --reset --network development
 
 ## DApp Testing
 
-1. Run Ganache CLI:
-```
-ganache-cli --accounts=50 --gasLimit 500000000 --gasPrice 30000000000
-```
+1. **Run Ganache CLI**:
+    ```
+    ganache-cli --accounts=50 --gasLimit 500000000 --gasPrice 30000000000
+    ```
 
-2. Run flightSurety and oracles truffle tests (separately):
-```
-truffle test ./test/flightSurety.js
+2. **Run flightSurety and oracles truffle tests (separately)**:
+    ```
+    truffle test ./test/flightSurety.js
 
-truffle test ./test/oracles.js
-```
+    truffle test ./test/oracles.js
+    ```
 
 ## Launching FlightSurety DApp
 
-1. Import contract owner, airline and passengers accounts from Ganache to Metamask using private keys.
+1. **Import accounts**
+
+    Import contract owner, airline and passengers accounts from Ganache to Metamask using private keys.
 Here is how to import accounts to Metamask:
 
     |# | Account  | Default| Metamask|
@@ -70,21 +72,24 @@ Here is how to import accounts to Metamask:
 <br>
 
 
-2. Run Ganache CLI:
-```
-ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit 500000000 --gasPrice 30000000000
-```
-3. Start the server and wait until oracles have been registered before starting the DApp:
-```
-npm run server
-```
+2. **Run Ganache CLI**:
+    ```
+    ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit 500000000 --gasPrice 30000000000
+    ```
+3. **Start the server**:
+    
+    Wait until oracles have been registered before starting the DApp
+    ```
+    npm run server
+    ```
 
 4. Start the DApp:
-```
-npm run dapp
-```
-<b>
-    Go to http://localhost:8000
+    ```
+    npm run dapp
+    ```
+
+5. Go to http://localhost:8000
+
 
 
 ## Resources
