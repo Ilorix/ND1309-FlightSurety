@@ -59,8 +59,13 @@ Here is how imported accounts are used in DApp and Metamask:
     |7  |passenger | 3 passenger accounts|
     |8  |passenger | |
     |9  |passenger | |
+    |10 |oracle | 40 oracles |
+    |.. |.. |  |
+    |50 |oracle |  |
 
-These default numbers are defined and can be changed in master_data.js (NUMBER_OF_AITLINES and NUMBER_OF_PASSENGERS).
+
+Airline and passenger default numbers of accounts are defined and can be changed in master_data.js: **NUMBER_OF_AIRLINES** and **NUMBER_OF_PASSENGERS** constants).
+Default number of oracle accounts is defined and can be changed in server.js: **NUMBER_OF_ORACLES**.
 <br>
 
 
