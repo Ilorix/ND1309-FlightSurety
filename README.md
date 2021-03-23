@@ -12,17 +12,17 @@ To install, download or clone this repo, then run:
 
 ## DApp Build and Deployment
 
-Compile contracts (FlightSuretyApp and FlightSuretyData contracts):
+1. **Compile contracts**:
 ```
 truffle compile
 ```
 
-Run Ganache CLI:
+2. **Run Ganache CLI**:
 ```
 ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit 500000000 --gasPrice 30000000000
 ```
 
-Deploy contracts:
+3. **Deploy contracts**:
 ```
 truffle migrate --reset --network development
 ```
@@ -69,7 +69,6 @@ Here is how to import accounts to Metamask:
     Airline and passenger default numbers of accounts are defined and can be changed in master_data.js: **NUMBER_OF_AIRLINES** and **NUMBER_OF_PASSENGERS** constants).
     
     Oracle accounts will not be imported to Metamask. The number of oracle accounts is defined and can be changed in server.js: **NUMBER_OF_ORACLES**.
-<br>
 
 
 2. **Run Ganache CLI**:
@@ -94,11 +93,7 @@ Here is how to import accounts to Metamask:
 
 ## Resources
 
-* [How does Ethereum work anyway?](https://medium.com/@preethikasireddy/how-does-ethereum-work-anyway-22d1df506369)
-* [BIP39 Mnemonic Generator](https://iancoleman.io/bip39/)
 * [Truffle Framework](http://truffleframework.com/)
 * [Ganache Local Blockchain](http://truffleframework.com/ganache/)
-* [Remix Solidity IDE](https://remix.ethereum.org/)
 * [Solidity Language Reference](http://solidity.readthedocs.io/en/v0.4.24/)
-* [Ethereum Blockchain Explorer](https://etherscan.io/)
 * [Web3Js Reference](https://github.com/ethereum/wiki/wiki/JavaScript-API)
