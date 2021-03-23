@@ -2,6 +2,17 @@
 
 Udacity Blockchain Developer Nanodegree project Flight Surety.
 
+### Libraries
+Library      | Version
+------------ | -------------
+Node             |v14.15.3
+Solidity         |v0.5.16
+Truffle          |v5.1.63
+truffle-hdwallet-provider |v1.0.17
+truffle-assertions   |v0.9.2
+@truffle/contract | 4.3.9
+web3             |v1.3.3
+
 
 ## Installation
 
@@ -45,7 +56,12 @@ truffle migrate --reset --network development
 
 ## Launching FlightSurety DApp
 
-1. **Import accounts**
+1. **Run Ganache CLI**:
+    ```
+    ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit 500000000 --gasPrice 30000000000
+    ```
+
+2. **Import accounts**
 
     Import contract owner, airline and passengers accounts from Ganache to Metamask using private keys.
 Here is how to import accounts to Metamask:
@@ -71,10 +87,6 @@ Here is how to import accounts to Metamask:
     Oracle accounts will not be imported to Metamask. The number of oracle accounts is defined and can be changed in server.js: **NUMBER_OF_ORACLES**.
 
 
-2. **Run Ganache CLI**:
-    ```
-    ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit 500000000 --gasPrice 30000000000
-    ```
 3. **Start the server**:
     
     Wait until oracles have been registered before starting the DApp
