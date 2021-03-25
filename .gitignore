@@ -106,6 +106,9 @@ dist
 # MAC
 .DS_Store
 
-# production
+# development
 build
 build_webpack
+
+#production
+prod/
