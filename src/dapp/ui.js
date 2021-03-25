@@ -61,11 +61,9 @@ export default class UI {
         //this.populateAirlineNames(data, "airlines-airline-name");
     }
 
-    //async populateAirlineNames(data, dropDownListID) {
     async populateAirlineNames(airlineNames, dropDownListID) {
         let dropDownList = DOM.elid(dropDownListID);
         this.clearDropdownList(dropDownList);
-        //let airlineNames = data.getAirlineNames();
         for (var i=0; i < airlineNames.length; i++) {
             let el = document.createElement("option");
             el.text = `${airlineNames[i]}`;
@@ -96,7 +94,6 @@ export default class UI {
                           ":"+date.getMinutes()+
                           ":"+date.getSeconds();
                 let el = document.createElement("option");
-                //alert(isFlightRegistered+' '+flights[i][1]+' '+departureTimeAsString);    
                 el.text = `${flights[i][1]} - ${departureTimeAsString}`;
                 el.value = `${flights[i][1]};${timestamp}`;
                 dropDownList.appendChild(el);            

@@ -42,15 +42,6 @@ const DApp = {
                 // Opt out of refresh page on network change
                 // Ref: https://docs.metamask.io/guide/ethereum-provider.html#properties
                 ethereum.autoRefreshOnNetworkChange = true;
-
-                // When user changes to another account,
-                // trigger necessary updates within DApp
-                //window.ethereum.on('accountsChanged', DApp.updateAccounts);
-
-                ethereum.on('accountsChanged', (accounts) => {
-                    // Handle the new accounts, or lack thereof.
-                    // "accounts" will always be an array, but it can be empty.
-                });
             } catch (error) {
                 // User denied account access
                 console.error('User denied web3 access');

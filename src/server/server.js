@@ -96,7 +96,7 @@ web3.eth.getAccounts().then(accounts => {
                 let flightStatus = Math.floor(Math.random() * 6) * 10;
                 console.log('index=' + index + ' result[0]=' + result[0] + ' result[1]=' + result[1] + ' result[2]=' + result[2]);
                 console.log('Random flight status: ' + flightStatus + ' from oracle: ' + oracle);
-                //Reply back to smart contract with the determined status code
+                // Respond to the contract with the status code
                 flightSuretyApp.methods
                   .submitOracleResponse(index, airline, flight, timestamp, flightStatus).send({
                     "from": oracle,
