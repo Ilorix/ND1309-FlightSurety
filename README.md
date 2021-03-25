@@ -70,15 +70,7 @@ To install, download or clone this repo, then run:
 
 ## Launching FlightSurety DApp
 
-1. **Run Ganache CLI**
-    
-    If not already running, run Ganache CLI with the following parameters::
-
-    ```
-    ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit=0x1fffffffffffff --allowUnlimitedContractSize
-    ```
-
-2. **Import Accounts**
+1. **Import Accounts**
 
     Import contract owner, airline and passengers accounts from Ganache to Metamask using private keys.
 Here is how to import accounts to Metamask:
@@ -100,14 +92,14 @@ Here is how to import accounts to Metamask:
     
 
 
-3. **Start the Server**
+2. **Start the Server**
     
     Wait until the 40 oracles have been registered before starting the DApp
     ```
     npm run server
     ```
 
-4. **Start the DApp**
+3. **Start the DApp**
     ```
     npm run dapp
     ```
