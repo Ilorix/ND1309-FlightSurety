@@ -46,11 +46,11 @@ To install, download or clone this repo, then run:
     ```
     truffle test ./test/flightSurety.js
     ````
-    ![flightSurety test](/screens/truffle-flightSurety-test.png)
+    ![flightSurety test](/screens/tests/truffle-flightSurety-test.png)
     ```
     truffle test ./test/oracles.js
     ```
-    ![flightSurety test](/screens/truffle-oracles-test.png)
+    ![flightSurety test](/screens/tests/truffle-oracles-test.png)
 
 
 ## DApp Deployment
