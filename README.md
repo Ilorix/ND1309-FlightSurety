@@ -20,8 +20,6 @@ Library      | Version
 truffle-assertions             |v0.9.2
 Chai         |v4.2.0
 
-truffle-assertions amd Chai libraries are used in Truffle test scripts.
-
 
 ## Installation
 

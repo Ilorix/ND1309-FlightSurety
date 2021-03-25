@@ -84,8 +84,7 @@ contract('Flight Surety Tests', async (accounts) => {
             }
             assert.equal(reverted, true, "Access not blocked for requireIsOperational");
 
-            // Set it back for other tests to work
-            //await data.setOperatingStatus(true);
+            // Set it back for next tests to work
             await data.setOperatingStatus(true, {from: config.owner});
 
         });
@@ -178,7 +177,6 @@ contract('Flight Surety Tests', async (accounts) => {
             assert.equal(isAirline5Funded, true, "Airline 5 couldn't be funded");
 
             // Register 5 flights by 5 airlines
-            let airlines = [airline1, airline2, airline3, airline4, airline5];
             for (i=0; i < flights.length; i++){
                 let airline = flights[i][0];
                 let flightName = flights[i][1];

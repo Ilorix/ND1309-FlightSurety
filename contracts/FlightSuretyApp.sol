@@ -262,18 +262,7 @@ contract FlightSuretyApp {
             msg.value == AIRLINE_MIN_FUND,
             "10 Ether is required for funding"
         );
-
         dataContractAddress.transfer(msg.value);
-
-        //address payable _dataContractAddress = address(uint160(dataContractAddress));
-        //_dataContractAddress.transfer(msg.value);
-        
-        //address(uint160(address(flightSuretyData))).transfer(msg.value);
-        //address(uint160(address(dataContractAddress))).transfer(msg.value);
-        //address(uint160(address(flightSuretyData))).transfer(msg.value);
-
-        //address(uint160(dataContractAddress)).transfer(msg.value);
-
         flightSuretyData.fundAirline(msg.sender);
         emit AirlineFunded(msg.sender, msg.value);
     }

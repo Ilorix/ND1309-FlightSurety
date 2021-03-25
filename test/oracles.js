@@ -42,7 +42,6 @@ contract('Oracles', async (accounts) => {
   /****************************************************************************************/
   describe('Oracles', () => {
     it('can register oracles', async () => {
-
       // ARRANGE
       let fee = await app.REGISTRATION_FEE.call();
 
@@ -64,22 +63,19 @@ contract('Oracles', async (accounts) => {
       await app.fetchFlightStatus(airline1, flight, timestamp);
       // ACT
 
-      // Since the Index assigned to each test account is opaque by design
-      // loop through all the accounts and for each account, all its Indexes (indices?)
-      // and submit a response. The contract will reject a submission if it was
-      // not requested so while sub-optimal, it's a good test of that feature
+      // Loop through all accounts and all indexes of an account, then submit a response.
+      // A submission is rejected by the contract if it was
+      // not requested.
       for (let a = 0; a < TEST_ORACLES_COUNT; a++) {
 
         // Get oracle information
         let oracleIndexes = await app.getMyIndexes.call({ from: accounts[ORACLE_START_IDX + a] });
         for (let idx = 0; idx < 3; idx++) {
-
           try {
-            // Submit a response...it will only be accepted if there is an Index match
+            // Submit a response. It will be accepted, only if there is a matching Index.
             await app.submitOracleResponse(oracleIndexes[idx], airline1, flight, timestamp, STATUS_CODE_ON_TIME, { from: accounts[ORACLE_START_IDX + a] });
           }
           catch (e) {
-            // Enable this when debugging
             //console.log('\nError', idx, oracleIndexes[idx].toNumber(), flight, timestamp);
           }
         }

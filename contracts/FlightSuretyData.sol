@@ -519,7 +519,7 @@ contract FlightSuretyData {
 
 
     /**
-     *  @dev Returns passenger total refunds (multiple flights)
+     *  @dev Returns passenger total refunds for all insured flights
      *
      */
     function getBalance(address passenger)
@@ -540,7 +540,7 @@ contract FlightSuretyData {
         requireIsOperational
         requireAuthorizedCaller
     {
-        // set flight is delayed due to status code 20.
+        // set flight as delayed due to status code 20.
         flightDelays[flightKey] = true;
         
         // Credit all insurees
@@ -559,7 +559,7 @@ contract FlightSuretyData {
     }
 
     /**
-     *  @dev Transfers eligible payout funds to insuree
+     *  @dev Transfers payout to insuree
      *  
      */
     function payInsuree(address payable passenger)
