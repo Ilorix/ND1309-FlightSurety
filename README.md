@@ -31,18 +31,19 @@ To install, download or clone this repo, then run:
 
 2. **Run Ganache CLI**
     
-    Run Ganache CLI again with the following parameters:
+    Run Ganache CLI with the following parameters:
     ```
-    ganache-cli --accounts=50 --gasLimit 500000000 --gasPrice 30000000000
+    ganache-cli --accounts=50 --gasLimit=0x1fffffffffffff --allowUnlimitedContractSize
     ```
 
 3. **Run Truffle Tests**:
     ```
     truffle test ./test/flightSurety.js
-
+    ````
+    ![flightSurety test](/screens/truffle-flightSurety-test.png)
+    ```
     truffle test ./test/oracles.js
     ```
-    ![flightSurety test](/screens/truffle-flightSurety-test.png)
     ![flightSurety test](/screens/truffle-oracles-test.png)
 
 
@@ -52,7 +53,7 @@ To install, download or clone this repo, then run:
 
    Stop and run Ganache CLI again with the following parameters: 
     ```
-    ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit 500000000 --gasPrice 30000000000
+    ganache-cli -m "seed words" --accounts=50 --gasLimit=0x1fffffffffffff --allowUnlimitedContractSize
     ```
 
 2. **Deploy Contracts**
