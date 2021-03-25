@@ -106,6 +106,21 @@ To install, download or clone this repo, then run:
     Open http://localhost:8000 in browser.
 
 
+## DApp Main Screens
+
+### Administration
+![flightSurety test](/screens/dapp/1-administration.png)
+
+### Airlines
+![flightSurety test](/screens/dapp/2-airlines.png)
+
+### Flights
+![flightSurety test](/screens/dapp/3-flights.png)
+
+### Insurances
+![flightSurety test](/screens/dapp/4-buy-insurance.png)
+![flightSurety test](/screens/dapp/5-insurances.png)
+
 
 ## Resources
 
