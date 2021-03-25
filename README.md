@@ -72,8 +72,7 @@ To install, download or clone this repo, then run:
 
 1. **Import Accounts**
 
-    Import contract owner, airline and passengers accounts from Ganache to Metamask using private keys.
-Here is how to import accounts to Metamask:
+    Import contract owner, airline and passengers accounts from Ganache to Metamask using private keys. The following table shows the accounts to be imported to Metamask:
 
     |# | Account  | Default| Metamask|
     |-- | ---- | --------- | --------|
