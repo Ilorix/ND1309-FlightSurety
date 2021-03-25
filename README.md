@@ -53,7 +53,7 @@ To install, download or clone this repo, then run:
 
    Stop and run Ganache CLI again with the following parameters: 
     ```
-    ganache-cli -m "seed words" --accounts=50 --gasLimit=0x1fffffffffffff --allowUnlimitedContractSize
+    ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit=0x1fffffffffffff --allowUnlimitedContractSize
     ```
 
 2. **Deploy Contracts**
