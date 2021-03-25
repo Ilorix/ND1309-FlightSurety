@@ -66,10 +66,10 @@ To install, download or clone this repo, then run:
 
 1. **Run Ganache CLI**
     
-    If not already running, run Ganache CLI again:
+    If not already running, run Ganache CLI with the following parameters::
 
     ```
-    ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit 500000000 --gasPrice 30000000000
+    ganache-cli -m "seed words" --accounts=50 --deterministic --gasLimit=0x1fffffffffffff --allowUnlimitedContractSize
     ```
 
 2. **Import Accounts**
@@ -81,20 +81,17 @@ Here is how to import accounts to Metamask:
     |-- | ---- | --------- | --------|
     |1  |owner | |   |
     |2  |airline | 5 airline accounts| import|
-    |3  |airline | ||
-    |4  |airline |  ||
-    |5  |airline |   ||
-    |6  |airline |||
+    |3  |airline | |import|
+    |4  |airline |  |import|
+    |5  |airline |   |import|
+    |6  |airline ||import|
     |7  |passenger | 3 passenger accounts|import|
-    |8  |passenger | ||
-    |9  |passenger | ||
+    |8  |passenger | |import|
+    |9  |passenger | |import|
     |10 |oracle | 40 oracles | don't import|
     |.. |.. | .. |..|
     |50 |oracle |  ||
     
-    Airline and passenger default numbers of accounts are defined and can be changed in master_data.js: **NUMBER_OF_AIRLINES** and **NUMBER_OF_PASSENGERS** constants).
-    
-    Oracle accounts will not be imported to Metamask. The number of oracle accounts is defined and can be changed in server.js: **NUMBER_OF_ORACLES**.
 
 
 3. **Start the Server**
