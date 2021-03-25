@@ -1,0 +1,106 @@
+body {
+    background-image: url('flight.jpg'); /* Source: iStockPhoto */
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-container {
+    margin-top: 80px;
+    background-color: rgb(36, 95, 135);
+    opacity: 0.9;
+    color: #fff;
+    padding: 20px 40px 20px 40px;
+}
+
+.table-container {
+    margin-top: 0px;
+    background-color: rgb(252, 246, 246);
+    opacity: 0.9;
+    color: rgb(7, 7, 7);
+    padding: 20px 40px 20px 40px;
+}
+
+.authorized-status {
+    vertical-align: middle;
+    font-size:18px; 
+    font-family: "Gill Sans", sans-serif;
+    margin-left:12px;
+    color: rgb(148, 225, 32);
+}
+
+.not-authorized-status {
+    vertical-align: middle;
+    font-size:18px; 
+    font-family: "Gill Sans", sans-serif;
+    margin-left:12px;
+    color: rgb(242, 255, 0);
+}
+
+.status-text {
+    margin-left:6px; 
+    font-style: normal;
+}
+
+.success-message {
+    background-color: rgb(172, 228, 172);
+    color:green
+}
+
+.error-message {
+    background-color: rgb(252, 198, 198);
+    color:rgb(174, 46, 0);
+    font-size: 18px;
+    font-family: "Gill Sans", sans-serif;
+}    
+
+.message-container {
+    margin-top: 60px;
+    padding: 10px 20px 10px 20px;
+    margin-bottom: -80px;
+}
+
+.section-title {
+    color:rgb(229, 246, 249);
+}
+
+select option { color: black; }
+select option:first-child{
+  color: rgba(0, 0, 0, 0.454);
+}
+
+.disabled-button {
+  color: rgba(8, 9, 9, 0.358);
+  background-color: rgba(8, 9, 9, 0.358);
+}
+
+.footer {
+    margin-bottom: 80px;
+}
+
+.top-space {
+    margin-top: 20px;
+}
+
+h5 {
+    color: #999999;
+}
+
+section {
+    margin-bottom: 50px;
+}
+
+.field {
+    text-align: right;
+}
+
+.field-value {
+    color: #0e7fa8;
+}
+
+label.form {
+    font-size: 14px;
+    margin-right: 20px;
+}
+input {
+    margin-right: 30px;
+}

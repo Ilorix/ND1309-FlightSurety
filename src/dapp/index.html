@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FlightSurety</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+        <a class="navbar-brand" href="#">FlightSurety</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active" id="admin-tab">
+                    <a class="nav-link" href="#">Administration<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" id="airlines-tab">
+                    <a class="nav-link" href="#">Airlines</a>
+                </li>
+                <li class="nav-item" id="flights-tab">
+                    <a class="nav-link" href="#">Flights</a>
+                </li>
+                <li class="nav-item" id="insurances-tab">
+                    <a class="nav-link" href="#">Insurances</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="modal" id="success-message-area">
+        <div class="modal-dialog">
+            <div class="modal-content success-message">
+                <div class="modal-body" id="success-message-body">
+                    <p id="success-message"></p>
+                </div>
+            </div><
+        </div>
+    </div>
+
+    <div class="modal" id="error-message-area">
+        <div class="modal-dialog">
+            <div class="modal-content error-message">
+                <div class="modal-body">
+                    <p id="error-message"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTRACT TAB -->
+    <div class="container main-container" id="contract-resource-forms" style="display: none">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="section-title" id="authorized-status" style="display:none">Contract<i class="bi bi-check-circle-fill authorized-status" id="authorized-status-icon">
+                    <span class="status-text">Authorized</span></i>
+                </h1>
+                <h1 class="section-title" id="not-authorized-status" style="display:inline-block">Contract<i class="bi bi-x-circle-fill not-authorized-status" id="not-authorized-status-icon">
+                    <span class="status-text">Not Authorized</span></i>
+                </h1>
+                <form>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-info text-white" id="authorize-contract" value="Authorize Contract">
+                        <input type="button" class="btn btn-info text-white" id="deauthorize-contract" value="Deauthorize Contract">
+                    </div>
+                </form>
+                <!-- Operational Status -->
+                <h3 class="section-title" id="operating-status" style="display:none">Operational Status<i class="bi bi-check-circle-fill authorized-status" id="authorized-status-icon">
+                    <span class="status-text">Operating</span></i>
+                </h3>
+                <h3 class="section-title" id="non-operating-status" style="display:inline-block">Operational Status<i class="bi bi-x-circle-fill not-authorized-status" id="not-authorized-status-icon">
+                    <span class="status-text">Not Operating</span></i>
+                </h3>                
+                <form>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-info text-white" id="operation-turn-off" value="Turn Operation Off">
+                        <input type="button" class="btn btn-info text-white" id="operation-turn-on" value="Turn Operation On">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- AIRLINES TAB -->
+    <div class="container main-container" id="airlines-resource-forms" style="display: none">
+        <div class="row">
+            <div class="col-12" id="airlines-registration-form">
+                <h1 class="section-title">Airlines</h1>
+                <!-- Registration -->
+                <h3 class="text-warning">Registration</h3>
+                <form>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">New Airline</label>
+                        <select class="form-control col-7" id="airlines-airline-address"></select>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Airline Name</label>
+                        <select class="form-control col-2" id="airlines-airline-name"></select>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Registering Airline</label>
+                        <select class="form-control col-7" id="airlines-register-by-airline-address"></select>
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-info text-white" id="register-airline"
+                            value="Register Airline">
+                    </div>
+                </form>
+                <hr class="bg-white" />
+            </div>
+            <!-- Funding -->
+            <div class="col-12" id="funding-form">
+                <h3 class="text-warning">Funding</h3>
+                <form>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Airline to Fund</label>
+                        <select class="form-control col-7" id="funding-registered-airlines"></select>
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-info text-white" id="fund-airline" value="Fund (10 ether)">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- FLIGHTS TAB -->
+    <div class="container main-container" id="flights-resource-forms" style="display: none">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="section-title">Flights</h1>
+                <h3 class="text-warning">Register Flight</h3>
+                <form>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Airline</label>
+                        <select class="form-control col-7" id="flights-airline-address"></select>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Flight No./Departure</label>
+                        <select class="form-control col-7" id="flights-no-departure"></select>
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-info text-white" id="register-flight"
+                            value="Register Flight">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- INSURANCES TAB -->
+    <div class="container main-container" id="insurances-resource-forms" style="display: none">
+        <div class="row">
+            <div class="col-12" id="insurances-form">
+                <h1 class="section-title">Insurances</h1>
+                <h4 class="text-warning">Buy Flight Insurance</h4>
+                <form id="insurances-buy-form">
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Flight</label>
+                        <select class="form-control col-7" id="insurance-select-flight"></select>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Passenger</label>
+                        <select class="form-control col-5" id="insurance-passenger-address"></select>
+                    </div>
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Premium (Ether)</label>
+                        <input type="number" min="0" max="1" class="form-control col-2" id="buy-insurance-payment-amount">
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-info text-white" id="buy-insurance" value="Buy Insurance">
+                    </div>
+                </form>
+                <hr class="bg-white" />
+                <h4 class="text-warning">Withdraw Insurance Payment</h4>
+                <form id="insurances-withdraw-form">
+                    <div class="mb-3 row">
+                        <label class="col-sm-2 col-form-label">Passenger</label>
+                        <select class="form-control col-5" id="insurance-withdraw-passenger-address"></select>
+                        <label class="col-sm-1 col-form-label">Balance:</label>
+                        <input type="number" class="form-control col-3" value="0" id="insurance-passenger-balance">
+                    </div>
+                    <div class="form-group">
+                        <input type="button" class="btn btn-info text-white" id="withdraw-insurance-amount"
+                            value="Withdraw">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--CONTENT AREA-->
+    <div class="container table-container" id="status-area" style="display: none">
+        <!-- Airlines Table -->
+        <div class="col-12" id="airlines-status-table">
+            <h4 class="col-12 progress-bar bg-info">Airlines</h4>
+            <div class="top-space">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Airline Name</th>
+                            <th scope="col">Airline</th>
+                            <th scope="col" class="text-center">Registered</th>
+                            <th scope="col" class="text-center">Funded</th>
+                        </tr>
+                    </thead>
+                    <tbody id="airlines-status-table-rows">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Flights Table -->
+        <div class="col-13" id="flights-status-table">
+            <h4 class="col-12 progress-bar bg-info">Flights</h4>
+            <div class="top-space">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th scope="col">Flight</th>
+                            <th scope="col">Airline</th>
+                            <th scope="col">Departure</th>
+                            <th scope="col" class="text-center">Delay</th>
+                            <th scope="col" class="text-center">&nbsp;</th>
+                        </tr>
+                    </thead>
+                    <tbody id="flights-status-table-rows">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- Insurances Table -->
+        <div class="col-13" id="insurances-status-table">
+            <h4 class="col-12 progress-bar bg-info">Insurances</h4>
+            <div class="top-space">
+                <table class="table table-sm">
+                    <thead>
+                        <tr>
+                            <th scope="col">Flights</th>
+                            <th scope="col">Insurees</th>
+                            <th scope="col">Premium (in Wei)</th>
+                            <th scope="col">Insurance Pay Out (in Wei)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="insurances-status-table-rows">
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div id="display-wrapper" class="top-space"></div>
+    <div class="footer"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+</body>
+
+</html>

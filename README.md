@@ -14,6 +14,14 @@ truffle-assertions   |v0.9.2
 @truffle/contract | 4.3.9
 web3             |v1.3.3
 
+### Testing libraries
+Library      | Version
+------------ | -------------
+truffle-assertions             |v0.9.2
+Chai         |v4.2.0
+
+truffle-assertions amd Chai libraries are used in Truffle test scripts.
+
 
 ## Installation
 
@@ -106,7 +114,7 @@ Here is how to import accounts to Metamask:
     npm run dapp
     ```
 
-5. Go to http://localhost:8000
+    Open http://localhost:8000 in browser.
 
 
 
