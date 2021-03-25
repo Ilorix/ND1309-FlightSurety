@@ -5,6 +5,7 @@ import './flightsurety.css';
 *  
 *  This class encapsulates all UI action handlers.
 */
+
 export default class UI {
 
     constructor (web3) {

@@ -52,20 +52,20 @@ export default class Contract {
     }
 
     async isContractAuthorized(){
-        let dataInstance = await this.getDataContractInstance();
-        return await dataInstance.isContractAuthorized(this.config.appAddress, {from: this.owner});       
+        let data = await this.getDataContractInstance();
+        return await data.isContractAuthorized(this.config.appAddress, {from: this.owner});       
     }
 
     async authorizeCaller() {   
-        let dataInstance = await this.getDataContractInstance();
-        await dataInstance.authorizeCaller(this.owner, {from: this.owner});
-        return await dataInstance.authorizeCaller(this.config.appAddress, {from: this.owner});
+        let data = await this.getDataContractInstance();
+        await data.authorizeCaller(this.owner, {from: this.owner});
+        return await data.authorizeCaller(this.config.appAddress, {from: this.owner});
     }
 
     async deauthorizeCaller() {
-        let dataInstance = await this.getDataContractInstance();
-        await dataInstance.deauthorizeCaller(this.owner, {from: this.owner});
-        return await dataInstance.deauthorizeCaller(this.config.appAddress, {from: this.owner});
+        let data = await this.getDataContractInstance();
+        await data.deauthorizeCaller(this.owner, {from: this.owner});
+        return await data.deauthorizeCaller(this.config.appAddress, {from: this.owner});
     }    
 
     async isOperational() {

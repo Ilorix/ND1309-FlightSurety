@@ -12,6 +12,7 @@ import FlightSuretyApp from '../../build/contracts/FlightSuretyApp.json';
 *
 *  This component encapsulates all UI event listeners.
 */
+
 document.addEventListener('DOMContentLoaded', () => {
     DApp.init();
 });    
